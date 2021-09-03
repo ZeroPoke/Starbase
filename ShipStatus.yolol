@@ -1,0 +1,2 @@
+n="\n" s="" m1="WarpClass:" m2="\nErrors:" m3="\nDAMAGE!"
+e=s if:DE>0then e=m2+:DE+m3 end :ShipStatus=m1+n+:WC+e goto2

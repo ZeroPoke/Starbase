@@ -1,0 +1,2 @@
+:BRPitch=atan((-2.5-:hOff)/:Dist) :BRRot=atan((2.5-:voff)/:Dist)
+goto1

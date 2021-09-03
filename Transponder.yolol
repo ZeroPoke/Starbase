@@ -1,0 +1,20 @@
+if :iSZ then :TBC=2 a=0 else :TBC=1 a=1 end
+if (not b)*a then :Tpdr=0 b=1 end
+if (not a)*b then b=0 end goto1
+
+
+
+
+
+
+
+
+
+
+// Changes transponder button color to red if exit safezone and turns
+// off transponder.  If button pressed after turn off, transponder
+// stays on.
+// Variables:
+// isz = insideSafeZone on transponder unit
+// tbc = Button Color on button unit
+// tpdr = Transponder on transponder unit and button first field

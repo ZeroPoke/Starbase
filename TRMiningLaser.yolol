@@ -1,0 +1,2 @@
+:TRPitch=atan((-2.5+:hOff)/:Dist) :TRRot=atan((-2.5+:voff)/:Dist)
+goto1

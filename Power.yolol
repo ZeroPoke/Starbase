@@ -1,0 +1,20 @@
+if:TBank>237500 then goto9 end
+if:TBank<235000 then if:Eco then goto11 else goto14 end end
+
+
+
+
+
+
+RateLimit=0.001 goto20
+
+RateLimit=10 goto20
+
+
+RateLimit=(240000-:TBANK)/900 goto20
+
+
+if:Center then :Dist=20 :hOff=0 :vOff=0 :MLBLength=20 :Center=0 end
+if:FullPower==1 then :Eco=0 end goto1
+
+:FuelChamberUnitRateLimit=RateLimit+(:FullPower*100)  goto17

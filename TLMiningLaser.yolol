@@ -1,0 +1,2 @@
+:TLPitch=atan((-2.5+:hOff)/:Dist) :TLRot=atan((2.5+:voff)/:Dist) 
+goto1

@@ -1,0 +1,19 @@
+if:Center THEN :TRPitch=-9.125 :TRRot=-9.125 END
+if:Center THEN :TLPitch=-9.125 :TLRot=9.125 END
+if:Center THEN :BRPitch=-9.125 :BRRot=9.125 END
+if:Center THEN :BLPitch=-9.125 :BLRot=-9.125 END
+if:Center THEN :MLBLength=20 :Center=0 END goto1
+
+
+
+
+
+
+
+
+
+
+
+
+
+

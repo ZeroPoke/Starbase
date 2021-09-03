@@ -1,0 +1,19 @@
+RT=(240000-:TBANK)/900 if:BWF thengoto12 elseif:BW70 thengoto11endend
+ifRT>50 thenif:Eco thengoto8 elseif:BW50 thengoto9endendend goto18
+
+
+
+RT=0.001 :FuelChamberUnitRateLimit=RT  goto1
+
+RT=10 :FuelChamberUnitRateLimit=RT  goto1
+RT=50 :FuelChamberUnitRateLimit=RT  goto1
+
+RT=70 :FuelChamberUnitRateLimit=RT :Eco=0 :BW50=0 goto1
+RT=100 :FuelChamberUnitRateLimit=RT :Eco=0 :BW50=0 goto1
+
+
+
+
+
+RT=(240000-:TBANK)/900 :FuelChamberUnitRateLimit=RT goto1
+

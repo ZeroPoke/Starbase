@@ -1,0 +1,8 @@
+if:FullLaser then goto8 else goto6 end
+
+
+
+:MiningLaser = 1
+:MiningLaser = 0 if :EcoLaser then goto5 else goto1 end
+
+:MiningLaser = 1 goto1

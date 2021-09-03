@@ -1,0 +1,19 @@
+:Dist=(:Dist+10)%360 :vOff=:rd*(sin(:Dist)) :hOff=:rd*cos :Dist
+:Dist=20
+:Dist=(:Dist+10)%360 :vOff=0 :hOff=:rd*(sin :Dist)
+:Dist=20
+:Dist=(:Dist+10)%360 :vOff=:rd*(sin Dist) :hOff=0
+:Dist=20 :vOff=0 goto1
+
+
+
+
+
+
+
+
+
+
+
+
+

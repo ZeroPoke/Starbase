@@ -1,0 +1,14 @@
+:x=(:x+10)%360 :vOff=:rd*(sin(:x)) :hOff=:rd*cos :x goto:mode
+:x=(:x+10)%360 :vOff=0 :hOff=:rd*(sin :x) goto:mode
+:x=(:x+10)%360 :vOff=:rd*(sin :x) :hOff=0 goto:mode
+
+and on my laser chip I'm not actually doing atan (3.9)/:d, I'm doing atan(3.9+:hOff)/:d to aim at a distance offset by :hOff, which oscillates between -1 and 1 due to that chip above doing the sine/cosine of x stuff (this part does actually mean that all lasers must calculate pitch and rotation, can't just get by with either or if they're mounted conveniently on an axis, so I guess you don't really save anything doing that in the end.)
+so in total each laser has its own professional chip doing 
+:pitch=atan((Laser_horizontal_coords+:hOff)/:d) :rot=atan((laser_vertical_coords+:voff)/:d) goto1
+ plus the chip that controls the oscillation
+@[Empire]NikofrankoV|🎄 is now!
+or, well, some of those lasers actually subtract the offset instead of adding it
+to make them all trace the same circle instead of each doing their own
+the second and third lines of the magic chip just set the horizontal or vertical offsets to 0 instead of letting them oscillate between -1 and 1, to toggle between them I have a lever with an output range from 1 to 3, center output of 2, and a deadzone of like 1.95, so the only valid positions are perfectly centered, all the way left, or all the way right
+and just goto that lever state (:mode)to select which movement mode I want
+:rd is the radius of the circle; it just multiplies the horizontal or vertical offset values by the leverstate of yet another lever
